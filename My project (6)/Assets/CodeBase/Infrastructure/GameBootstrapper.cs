@@ -1,3 +1,4 @@
+//GameBootstrapper
 using UnityEngine;
 
 namespace CodeBase.Infrastructure

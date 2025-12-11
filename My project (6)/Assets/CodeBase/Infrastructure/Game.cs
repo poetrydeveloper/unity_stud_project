@@ -1,3 +1,4 @@
+//Game.cs
 using CodeBase.Services.Input;
 using Unity.Android.Gradle.Manifest;
 
