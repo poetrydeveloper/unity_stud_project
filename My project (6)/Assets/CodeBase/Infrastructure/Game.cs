@@ -1,25 +1,18 @@
 //Game.cs
 using CodeBase.Services.Input;
-using Unity.Android.Gradle.Manifest;
 
 namespace CodeBase.Infrastructure
 {
     public class Game
     {
-        public static IInputService InputService;
+        public static IInputService InputService { get; set; }
+        public GameStateMachine _stateMashine;
+        
 
         public Game()
         {
-            RegisterInputService();
+           _stateMashine =  new GameStateMachine(); 
         }
-
-        private static void RegisterInputService()
-        {
-            #if UNITY_EDITOR
-                        InputService = new StandaloneInputService();
-            #else
-                        InputService = new MobileInputService();
-            #endif
-        }
+        
     }
 }
